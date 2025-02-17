@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'TheRainmaker';
+    src: url('therainmaker.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: black;
+    font-family: 'TheRainmaker', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.text-box {
+    width: 80%;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#draggable {
+    position: absolute;
+    cursor: pointer;
+}
+
+.text-box:active {
+    cursor: grabbing;
+}
+
+h1, h2 {
+    font-weight: normal;
+    font-size: 70px;
+    color: white;
+    margin: 10px 0;
+}
+
+p {
+    font-weight: normal;
+    font-size: 40px;
+    color: white;
+    margin: 10px 0;
+}
+
+.plop {
+    display: inline-block; 
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.plop a {
+    color: black; 
+    text-decoration: none; 
+    font-size: 40px;
+    font-family: 'TheRainmaker', sans-serif;
+    font-weight: normal;
+}
+
+.plop:hover {
+    background-color: black;
+    border: 2px solid white; 
+}
+
+.plop:hover a {
+    color: white; 
+}
+
+.plop:active {
+    background-color: white;
+}
+
+.plop:active a {
+    color: black; 
+}
+
+@media (max-width: 768px) {
+    .text-box h1 {
+        font-size: 6vw;
+    }
+
+    .plop a {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-box h1 {
+        font-size: 8vw;
+    }
+
+    .plop a {
+        font-size: 6vw;
+    }
+}
