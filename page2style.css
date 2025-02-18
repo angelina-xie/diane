@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'TheRainmaker';
+    src: url('therainmaker.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    height: 200vh; 
+}
+
+h1 {
+    font-family: 'TheRainmaker', sans-serif;
+    font-weight: 70;
+    font-size: 50px;
+    color: white;
+    margin: 10px 0;
+    top: 30px;
+    left: 30px;
+}
+
+.fade-in-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+   
+}
+
+h2 {
+    font-family: 'TheRainmaker', sans-serif;
+    font-weight: 70;
+    font-size: 120px;
+    color: white;
+    margin: 10px 0;
+    text-align: right;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.fade-in-container {
+    animation-play-state: paused;
+}
+
+body.scrolled .fade-in-container {
+    animation-play-state: running;
+}
+
+body.scrolled .fade-in-container {
+    pointer-events: auto; 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    .fade-in-container a h2 {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    .fade-in-container a h2 {
+        font-size: 6vw;
+    }
+}

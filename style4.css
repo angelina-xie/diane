@@ -1,0 +1,55 @@
+body {
+    display: flex;
+      background-color: black;
+      width: 100vw;
+      height: 100vh;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  * {
+      margin: 0%;
+      padding: 0%;
+  }
+  
+  h1 {
+      color: white;
+      font-size: 50px;
+      font-family: 'The Rainmaker';
+
+  }
+  
+ img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+ }
+
+ @media (max-width: 768px) {
+    .final {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    a img {
+        width: 25vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    a img {
+        width: 40vw;
+    }
+}
