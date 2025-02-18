@@ -1,27 +1,43 @@
-const draggable = document.getElementById ('draggable');
+const draggable = document.getElementById('draggable');
 
-let isDragging=false;
+let isDragging = false;
 let offsetX, offsetY;
-let initialZIndex=1;
+let initialZIndex = 1;
 
-draggable.addEventListener('mousedown', (e) => {
+draggable.addEventListener('mousedown', startDrag);
+draggable.addEventListener('touchstart', startDrag, { passive: false });
+
+document.addEventListener('mousemove', drag);
+document.addEventListener('touchmove', drag, { passive: false });
+
+document.addEventListener('mouseup', endDrag);
+document.addEventListener('touchend', endDrag);
+
+function startDrag(e) {
+    e.preventDefault(); 
     isDragging = true;
-    offsetX = e.clientX - draggable.getBoundingClientRect().left;
-    offsetY = e.clientY - draggable.getBoundingClientRect().top;
-    draggable.style.cursor = 'grabbing'
-    draggable.style.zindex=1000;
-});
+    const event = e.touches ? e.touches[0] : e; 
+    
+    offsetX = event.clientX - draggable.getBoundingClientRect().left;
+    offsetY = event.clientY - draggable.getBoundingClientRect().top;
+    
+    draggable.style.cursor = 'grabbing';
+    draggable.style.zIndex = 1000;
+}
 
-document.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-        draggable.style.position = 'fixed';
-        draggable.style.left = `${e.clientX - offsetX}px`;
-        draggable.style.top = `${e.clientY - offsetY}px`;
-    }
-});
+function drag(e) {
+    if (!isDragging) return;
+    const event = e.touches ? e.touches[0] : e;
+    
+    draggable.style.position = 'fixed';
+    draggable.style.left = `${event.clientX - offsetX}px`;
+    draggable.style.top = `${event.clientY - offsetY}px`;
+    
+    e.preventDefault(); 
+}
 
-document.addEventListener('mouseup', () => {
+function endDrag() {
     isDragging = false;
     draggable.style.cursor = 'grab';
-    draggable.Z.Index = initialZIndex
-});
+    draggable.style.zIndex = initialZIndex;
+}
