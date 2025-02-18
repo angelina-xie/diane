@@ -1,8 +1,16 @@
 
+@font-face {
+    font-family: 'TheRainmaker', sans-serif;
+    src: url('therainmaker.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
 body
 {
     background-color: black;
     color: white;
+    font-family: 'TheRainmaker', sans-serif;
 }
 
 * {
@@ -33,16 +41,10 @@ body
 
 .container
 {
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
-@font-face {
-    font-family: 'TheRainmaker', sans-serif;
-    src: url('therainmaker.otf') format('opentype');
-font-weight: normal;
-font-style: normal;
-}
+
 
 a {
     text-decoration: none; 
@@ -57,7 +59,8 @@ a {
  
 }
 p
-{ font-family: 'TheRainmaker';
+{ 
+    font-family: 'TheRainmaker', sans-serif;
 font-size: 60px;
 color: white;
 position: fixed;
