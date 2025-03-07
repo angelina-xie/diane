@@ -2,87 +2,98 @@
     font-family: 'TheRainmaker';
     src: url('therainmaker.otf') format('opentype'); 
     font-weight: normal;
-    font-style: normal;}
-
-.container {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-style: normal;
 }
 
-.text-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+body
+{
+    background-color: black;
+    color: white;
+    font-family: 'TheRainmaker', sans-serif;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    color: white;
+
+
 }
 
 .draggable {
-    color: white;
-    font-family: 'TheRainmaker', sans-serif;
-    font-size: 55px;
-    border: 2px solid white;
-    padding: 2px 9px;
-    border-radius: 10px;
-    background-color: black;
-    z-index: 1;
-    cursor: grab;
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
+  color: white;
+  font-family: 'TheRainmaker', sans-serif;
+  font-size: 55px;
+  position: fixed;
+  border: 2px solid white;
+  padding: 2px 9px;
+  border-radius: 10px;
+  top: 250px;
+  left: 635px;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer
+  
 }
+
+
+.container
+{
+    width: 100%;
+}
+
+
 
 a {
     text-decoration: none; 
     color: black; 
-    background-color: white;
-    border-radius: 5px;
-    padding: 2px;
-    font-size: 43px;
-    position: relative;
-    display: inline-block;
-}
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px;
 
-p {
+  font-size: 43px;
+  position: relative;
+  top: -5px;
+ 
+}
+p
+{ 
     font-family: 'TheRainmaker', sans-serif;
-    font-size: 60px;
-    color: white;
-    position: fixed;
-    top: 30px;
-    left: 30px;
+font-size: 60px;
+color: white;
+position: fixed;
+top: 30px;
+left: 30px;}
+
+.draggable:hover {
+  cursor:grab
 }
 
 @media (max-width: 768px) {
-    .pop p {
-        font-size: 5vw;
-    }
+  .pop p {
+      font-size: 5vw;
+  }
 
-    .pop a {
-        font-size: 4vw;
-    }
+  .pop a {
+      font-size: 4vw;
+  }
 
-    .draggable {
-        font-size: 4vw;
-        top: -50px;
-    }
+  .draggable {
+      font-size: 4vw;
+  }
 }
 
 @media (max-width: 480px) {
-    .pop p {
-        font-size: 7vw;
-    }
+  .pop p {
+      font-size: 7vw;
+  }
 
-    .pop a {
-        font-size: 6vw;
-    }
+  .pop a {
+      font-size: 6vw;
+  }
 
-    .draggable {
-        font-size: 6vw;
-        top: -45px;
-    }
+  .draggable {
+      font-size: 6vw;
+  }
 }
