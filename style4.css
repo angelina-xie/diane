@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'TheRainmaker';
+    src: url('therainmaker.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;}
+
 body {
     display: flex;
       background-color: black;
@@ -7,6 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    font-family: 'TheRainmaker', sans-serif;
   }
   
   * {
