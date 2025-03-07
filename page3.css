@@ -1,8 +1,9 @@
+
 @font-face {
-    font-family: 'TheRainmaker';
-    src: url('therainmaker.otf') format('opentype'); 
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'TheRainmaker', sans-serif;
+    src: url('therainmaker.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
 }
 
 body
@@ -23,7 +24,7 @@ body
 
 .draggable {
   color: white;
-  font-family: 'TheRainmaker', sans-serif;
+  font-family: 'TheRainmaker';
   font-size: 55px;
   position: fixed;
   border: 2px solid white;
